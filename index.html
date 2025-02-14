@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Happy Birthday Ady!</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+      background: linear-gradient(105deg, #d4af37, #c0c0c0, #ede029);
+      overflow: scroll;
+      scrollbar-width: none;
+      scrollbar-color: #00000000;
+      padding: 10px;
+      color: #fff;
+      text-align: center;
+    }
+    .body {
+        display: block;
+    }
+    h1 {
+      font-size: 4rem;
+      margin-top: -10px;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      color: #f4f4f4;
+      text-shadow: 0 0 15px #ffd700, 0 0 30px #fff;
+      animation: fadeIn 3s ease-in-out;
+    }
+    p {
+      font-size: 1.5rem;
+      margin: 20px 0;
+      color: #dcdcdc;
+      animation: fadeIn 4s ease-in-out;
+    }
+    .gallery {
+      margin: 50px auto;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 20px;
+    }
+    .gallery img, .gallery video {
+    max-width: 300px;
+      border-radius: 10px;
+      border: 2px solid #fff;
+      box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5);
+      animation: fadeIn 5s ease-in-out;
+    }
+    @keyframes fadeIn {
+      from { opacity: 0; }
+      to { opacity: 1; }
+    }
+    .sparkles {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      overflow: hidden;
+      z-index: -1;
+    }
+    .sparkle {
+      position: absolute;
+      width: 5px;
+      height: 5px;
+      background: linear-gradient(45deg, #fff, #ffd700);
+      border-radius: 50%;
+      animation: sparkle 3s linear infinite;
+    }
+    .none {
+        display: none;
+    }
+
+    .gift {
+        margin-top: 180px;
+        margin-bottom: 180px;
+        padding: 10px;
+    }
+
+    .footer p {
+        background-color: #000000;
+        position: static;
+        text-align: center;
+        font-size: small;
+        color: #d4af37;
+        padding: 3px;
+        margin-bottom: -10px;
+        margin-left: -10px;
+        margin-right: -10px;
+    }
+
+    @keyframes sparkle {
+      0% { transform: translateY(0) scale(0.5); opacity: 1; }
+      100% { transform: translateY(100vh) scale(1.5); opacity: 0; }
+    }
+
+    @media only screen and (min-width: 500px) {
+  .body {
+    display: none;
+  }
+  .none {
+    display: block;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+  }
+  .none p {
+    font-size: 4rem;
+      margin-top: 15vh;
+      color: #f4f4f4;
+      text-shadow: 0 0 15px #ffd700, 0 0 30px #fff;
+      animation: fadeIn 3s ease-in-out;
+  }
+}
+  </style>
+</head>
+<body>
+<div class="body">
+    <div class="sparkles" id="sparkles"></div>
+        <img class="gift" src="gift.gif" width="100%" alt="Cake">
+        <img src="cake.gif" width="50%" alt="Cake">
+        <h1>Happy Birthday <br> Ady! <br> 🎉</h1>
+        <p>Wishing you an unforgettable day filled with happiness, love, and golden memories!</p>
+  
+  <div class="gallery">
+    <img src="00.JPG" width="100%" alt="Ady's Photo 1">
+    <img src="000.png" width="100%" alt="Ady's Photo 1">
+    <img src="0.png" alt="Ady's Photo 2">
+    <video controls>
+      <source src="0.mp4" type="video/mp4">
+      Your browser does not support the video tag.
+    </video>
+    <video controls>
+      <source src="2.mp4" type="video/mp4">
+      Your browser does not support the video tag.
+    </video>
+    <img src="1.jpg" alt="Ady's Photo 3">
+    <video controls>
+      <source src="1.mp4" type="video/mp4">
+      Your browser does not support the video tag.
+    </video>
+    <video controls>
+      <source src="1-2.mp4" type="video/mp4">
+      Your browser does not support the video tag.
+    </video>
+    <img src="2.jpg" alt="">
+    <img src="3.jpg" alt="">
+    <img src="4.jpg" alt="">
+</div>
+<div class="footer">
+    <p>Make with 💖 From Dipanshu!</p>
+</div>
+</div>
+
+  <div class="none">
+    <p>Use An Android/iOS Mobile Phone to Open this</p>
+  </div>
+
+  <script>
+    // Sparkle effect
+    const sparklesContainer = document.getElementById('sparkles');
+    function createSparkle() {
+      const sparkle = document.createElement('div');
+      sparkle.classList.add('sparkle');
+      sparkle.style.left = `${Math.random() * 100}vw`;
+      sparkle.style.animationDuration = `${2 + Math.random() * 3}s`;
+      sparklesContainer.appendChild(sparkle);
+      setTimeout(() => sparkle.remove(), 5000);
+    }
+    setInterval(createSparkle, 100);
+  </script>
+</body>
+</html>
